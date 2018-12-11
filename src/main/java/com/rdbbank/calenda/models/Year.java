@@ -1,6 +1,7 @@
 package com.rdbbank.calenda.models;
 
 import com.rdbbank.calenda.models.base.BaseProThree;
+import com.rdbbank.calenda.models.secusers.SecUser;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -12,7 +13,8 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "td_year")
 public class Year extends BaseProThree{
-    public Year(String des, String desEn) {
-        super(des, desEn);
+
+    public Year(String num, Integer numEn, String des, String desEn, SecUser secUser) {
+        super(num, numEn, des, desEn, secUser);
     }
 }

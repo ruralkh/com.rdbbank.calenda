@@ -1,0 +1,17 @@
+==================== tables ===================
+1- sec_user
+2- sec_role
+3- tb_year
+4- tb_month
+5- tb_day
+6- sec_user_role
+===================== Relationship ====================
+3- tb_year connect with tb_month: mn
+5- tb_day connect with tb_month: mn
+
+DROP TABLE td_year,td_month,td_day;
+SELECT *FROM td_day;
+
+INSERT INTO td_day(id,num,num_en,'des','des_en') VALUES (1,1,1,'one','one');
+
+INSERT INTO td_day(id,num,num_en,des,des_en) VALUES (2,2,២,'two','ពី');
