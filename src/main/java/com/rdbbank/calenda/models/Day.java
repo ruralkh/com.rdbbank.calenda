@@ -1,10 +1,11 @@
 package com.rdbbank.calenda.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.rdbbank.calenda.models.base.BaseProThree;
 import com.rdbbank.calenda.models.secusers.SecUser;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.Set;
 
 /**
  * Create By: Ron Rith
@@ -14,7 +15,20 @@ import javax.persistence.Table;
 @Table(name = "td_day")
 public class Day extends BaseProThree{
 
+    private Set<Month> months;
+
     public Day(String num, Integer numEn, String des, String desEn, SecUser secUser) {
         super(num, numEn, des, desEn, secUser);
+    }
+
+    @JsonIgnore
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(name = "td_day_month_detail", joinColumns = @JoinColumn(name = "day_id"), inverseJoinColumns = @JoinColumn(name = "month_id"))
+    public Set<Month> getMonths() {
+        return months;
+    }
+
+    public void setMonths(Set<Month> months) {
+        this.months = months;
     }
 }
