@@ -63,7 +63,7 @@ public class BaseProThree extends BaseEntity{
     }
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="sec_user_id")
+    @JoinColumn(name = "sec_user_id")
     public SecUser getSecUser() {
         return secUser;
     }

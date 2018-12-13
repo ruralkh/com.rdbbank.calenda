@@ -15,6 +15,17 @@ import java.util.Set;
 @Table(name = "td_day")
 public class Day extends BaseProThree{
 
+    private Set<DateNumberDayDetail> dateNumberDayDetails;
+
+    @OneToMany(mappedBy = "day", cascade = CascadeType.ALL, orphanRemoval = true)
+    public Set<DateNumberDayDetail> getDateNumberDayDetails() {
+        return dateNumberDayDetails;
+    }
+
+    public void setDateNumberDayDetails(Set<DateNumberDayDetail> dateNumberDayDetails) {
+        this.dateNumberDayDetails = dateNumberDayDetails;
+    }
+
     private Set<Month> months;
 
     public Day(String num, Integer numEn, String des, String desEn, SecUser secUser) {

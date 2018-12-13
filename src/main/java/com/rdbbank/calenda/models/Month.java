@@ -17,6 +17,8 @@ public class Month extends BaseProThree{
 
     private Set<Year> years;
 
+    private Set<DateNumberDayDetail> dateNumberDayDetails;
+
     public Month(String num, Integer numEn, String des, String desEn, SecUser secUser) {
         super(num, numEn, des, desEn, secUser);
     }
@@ -30,5 +32,14 @@ public class Month extends BaseProThree{
 
     public void setYears(Set<Year> years) {
         this.years = years;
+    }
+
+    @OneToMany(mappedBy = "month",cascade = CascadeType.ALL,orphanRemoval = true)
+    public Set<DateNumberDayDetail> getDateNumberDayDetails() {
+        return dateNumberDayDetails;
+    }
+
+    public void setDateNumberDayDetails(Set<DateNumberDayDetail> dateNumberDayDetails) {
+        this.dateNumberDayDetails = dateNumberDayDetails;
     }
 }
