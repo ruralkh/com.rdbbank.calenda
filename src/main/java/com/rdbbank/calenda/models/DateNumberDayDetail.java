@@ -9,7 +9,9 @@ import java.io.Serializable;
  */
 @Entity
 @Table(name = "td_date_day_detail")
-public class DateNumberDayDetail implements Serializable{
+public class DateNumberDayDetail{
+
+    private Long id;
 
     private String monthReference;
 
@@ -30,7 +32,6 @@ public class DateNumberDayDetail implements Serializable{
         this.monthReference = monthReference;
     }
 
-    @Id
     @ManyToOne
     @JoinColumn(name = "date_number_id")
     public DateNumber getDateNumber() {
@@ -41,7 +42,6 @@ public class DateNumberDayDetail implements Serializable{
         this.dateNumber = dateNumber;
     }
 
-    @Id
     @ManyToOne
     @JoinColumn(name = "date_id")
     public Day getDay() {
@@ -52,7 +52,6 @@ public class DateNumberDayDetail implements Serializable{
         this.day = day;
     }
 
-    @Id
     @ManyToOne
     @JoinColumn(name = "month_id")
     public Month getMonth() {
@@ -63,7 +62,6 @@ public class DateNumberDayDetail implements Serializable{
         this.month = month;
     }
 
-    @Id
     @ManyToOne
     @JoinColumn(name = "year_id")
     public Year getYear() {
@@ -72,5 +70,15 @@ public class DateNumberDayDetail implements Serializable{
 
     public void setYear(Year year) {
         this.year = year;
+    }
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }

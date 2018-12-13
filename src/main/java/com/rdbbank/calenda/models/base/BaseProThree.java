@@ -71,4 +71,7 @@ public class BaseProThree extends BaseEntity{
     public void setSecUser(SecUser secUser) {
         this.secUser = secUser;
     }
+
+    public BaseProThree() {
+    }
 }

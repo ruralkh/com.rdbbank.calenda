@@ -31,4 +31,8 @@ public class Year extends BaseProThree{
     public void setDateNumberDayDetails(Set<DateNumberDayDetail> dateNumberDayDetails) {
         this.dateNumberDayDetails = dateNumberDayDetails;
     }
+
+    public Year(){
+        super();
+    }
 }

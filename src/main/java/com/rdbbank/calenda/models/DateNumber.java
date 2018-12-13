@@ -28,4 +28,8 @@ public class DateNumber extends BaseProThree {
     public DateNumber(String num, Integer numEn, String des, String desEn, SecUser secUser) {
         super(num, numEn, des, desEn, secUser);
     }
+
+    public DateNumber() {
+        super();
+    }
 }

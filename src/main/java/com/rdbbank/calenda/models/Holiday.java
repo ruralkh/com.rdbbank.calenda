@@ -17,4 +17,7 @@ public class Holiday extends BaseProThree{
     public Holiday(String num, Integer numEn, String des, String desEn, SecUser secUser) {
         super(num, numEn, des, desEn, secUser);
     }
+    public Holiday(){
+
+    }
 }

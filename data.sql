@@ -129,50 +129,50 @@ INSERT INTO td_day_month_detail(day_id, month_id) VALUES
   ,(1,12)
 ;
 /*date_num and day 2019 Jan*/
-INSERT INTO td_date_day_detail(month_reference, year_id, month_id, date_id, date_number_id) VALUES
-  ('Jan2019',13,1,1,6)
-  ,('Jan2019',13,1,1,13)
-  ,('Jan2019',13,1,1,20)
-  ,('Jan2019',13,1,1,27)
+INSERT INTO td_date_day_detail(id,month_reference, year_id, month_id, date_id, date_number_id) VALUES
+  (1,'Jan2019',13,1,1,6)
+  ,(2,'Jan2019',13,1,1,13)
+  ,(3,'Jan2019',13,1,1,20)
+  ,(4,'Jan2019',13,1,1,27)
 ;
-INSERT INTO td_date_day_detail(month_reference, year_id, month_id, date_id, date_number_id) VALUES
-  ('Jan2019',13,1,7,5)
-  ,('Jan2019',13,1,7,12)
-  ,('Jan2019',13,1,7,19)
-  ,('Jan2019',13,1,7,26)
+INSERT INTO td_date_day_detail(id,month_reference, year_id, month_id, date_id, date_number_id) VALUES
+  (5,'Jan2019',13,1,7,5)
+  ,(6,'Jan2019',13,1,7,12)
+  ,(7,'Jan2019',13,1,7,19)
+  ,(8,'Jan2019',13,1,7,26)
 ;
-INSERT INTO td_date_day_detail(month_reference, year_id, month_id, date_id, date_number_id) VALUES
-  ('Jan2019',13,1,6,4)
-  ,('Jan2019',13,1,6,11)
-  ,('Jan2019',13,1,6,18)
-  ,('Jan2019',13,1,6,25)
+INSERT INTO td_date_day_detail(id,month_reference, year_id, month_id, date_id, date_number_id) VALUES
+  (9,'Jan2019',13,1,6,4)
+  ,(10,'Jan2019',13,1,6,11)
+  ,(11,'Jan2019',13,1,6,18)
+  ,(12,'Jan2019',13,1,6,25)
 ;
-INSERT INTO td_date_day_detail(month_reference, year_id, month_id, date_id, date_number_id) VALUES
-  ('Jan2019',13,1,5,3)
-  ,('Jan2019',13,1,5,10)
-  ,('Jan2019',13,1,5,17)
-  ,('Jan2019',13,1,5,24)
-  ,('Jan2019',13,1,5,31)
+INSERT INTO td_date_day_detail(id,month_reference, year_id, month_id, date_id, date_number_id) VALUES
+  (13,'Jan2019',13,1,5,3)
+  ,(14,'Jan2019',13,1,5,10)
+  ,(15,'Jan2019',13,1,5,17)
+  ,(16,'Jan2019',13,1,5,24)
+  ,(17,'Jan2019',13,1,5,31)
 ;
-INSERT INTO td_date_day_detail(month_reference, year_id, month_id, date_id, date_number_id) VALUES
-  ('Jan2019',13,1,4,2)
-  ,('Jan2019',13,1,4,9)
-  ,('Jan2019',13,1,4,16)
-  ,('Jan2019',13,1,4,23)
-  ,('Jan2019',13,1,4,30)
+INSERT INTO td_date_day_detail(id,month_reference, year_id, month_id, date_id, date_number_id) VALUES
+  (18,'Jan2019',13,1,4,2)
+  ,(19,'Jan2019',13,1,4,9)
+  ,(20,'Jan2019',13,1,4,16)
+  ,(21,'Jan2019',13,1,4,23)
+  ,(22,'Jan2019',13,1,4,30)
 ;
-INSERT INTO td_date_day_detail(month_reference, year_id, month_id, date_id, date_number_id) VALUES
-  ('Jan2019',13,1,3,1)
-  ,('Jan2019',13,1,3,8)
-  ,('Jan2019',13,1,3,15)
-  ,('Jan2019',13,1,3,22)
-  ,('Jan2019',13,1,3,29)
+INSERT INTO td_date_day_detail(id,month_reference, year_id, month_id, date_id, date_number_id) VALUES
+  (23,'Jan2019',13,1,3,1)
+  ,(24,'Jan2019',13,1,3,8)
+  ,(25,'Jan2019',13,1,3,15)
+  ,(26,'Jan2019',13,1,3,22)
+  ,(27,'Jan2019',13,1,3,29)
 ;
-INSERT INTO td_date_day_detail(month_reference, year_id, month_id, date_id, date_number_id) VALUES
-  ('Jan2019',13,1,2,7)
-  ,('Jan2019',13,1,2,14)
-  ,('Jan2019',13,1,2,21)
-  ,('Jan2019',13,1,2,28)
+INSERT INTO td_date_day_detail(id,month_reference, year_id, month_id, date_id, date_number_id) VALUES
+  (28,'Jan2019',13,1,2,7)
+  ,(29,'Jan2019',13,1,2,14)
+  ,(30,'Jan2019',13,1,2,21)
+  ,(31,'Jan2019',13,1,2,28)
 ;
 
 /**/

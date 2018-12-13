@@ -42,4 +42,8 @@ public class Day extends BaseProThree{
     public void setMonths(Set<Month> months) {
         this.months = months;
     }
+
+    public Day(){
+
+    }
 }

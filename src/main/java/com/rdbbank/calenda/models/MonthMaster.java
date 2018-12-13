@@ -129,4 +129,5 @@ public class MonthMaster extends BaseEntity {
         this.month = month;
         this.holiday = holiday;
     }
+
 }
