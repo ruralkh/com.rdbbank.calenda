@@ -1,5 +1,6 @@
-package com.rdbbank.calenda.models;
+package com.rdbbank.calenda.models.solar;
 
+import com.rdbbank.calenda.models.DateNumberDayDetail;
 import com.rdbbank.calenda.models.base.BaseProThree;
 import com.rdbbank.calenda.models.secusers.SecUser;
 

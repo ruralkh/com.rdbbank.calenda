@@ -1,7 +1,15 @@
 package com.rdbbank.calenda.models;
 
+import com.rdbbank.calenda.models.lunar.DayNumLunar;
+import com.rdbbank.calenda.models.lunar.MonthLunar;
+import com.rdbbank.calenda.models.lunar.YearBuddhaEra;
+import com.rdbbank.calenda.models.lunar.YearLunar;
+import com.rdbbank.calenda.models.solar.DateNumber;
+import com.rdbbank.calenda.models.solar.Day;
+import com.rdbbank.calenda.models.solar.Month;
+import com.rdbbank.calenda.models.solar.Year;
+
 import javax.persistence.*;
-import java.io.Serializable;
 
 /**
  * Create By: Ron Rith
@@ -22,6 +30,54 @@ public class DateNumberDayDetail{
     private Month month;
 
     private Year year;
+
+    private MonthLunar monthLunar;
+
+    private YearLunar yearLunar;
+
+    private YearBuddhaEra yearBuddhaEra;
+
+    private DayNumLunar dayNumLunar;
+
+    @ManyToOne
+    @JoinColumn(name = "day_num_lunar_id")
+    public DayNumLunar getDayNumLunar() {
+        return dayNumLunar;
+    }
+
+    public void setDayNumLunar(DayNumLunar dayNumLunar) {
+        this.dayNumLunar = dayNumLunar;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "year_buddha_id")
+    public YearBuddhaEra getYearBuddhaEra() {
+        return yearBuddhaEra;
+    }
+
+    public void setYearBuddhaEra(YearBuddhaEra yearBuddhaEra) {
+        this.yearBuddhaEra = yearBuddhaEra;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "year_lunar_id")
+    public YearLunar getYearLunar() {
+        return yearLunar;
+    }
+
+    public void setYearLunar(YearLunar yearLunar) {
+        this.yearLunar = yearLunar;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "month_lunar_id")
+    public MonthLunar getMonthLunar() {
+        return monthLunar;
+    }
+
+    public void setMonthLunar(MonthLunar monthLunar) {
+        this.monthLunar = monthLunar;
+    }
 
     @Column(name = "month_reference")
     public String getMonthReference() {

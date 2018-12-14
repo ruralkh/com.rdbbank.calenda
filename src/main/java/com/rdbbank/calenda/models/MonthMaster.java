@@ -1,6 +1,7 @@
 package com.rdbbank.calenda.models;
 
 import com.rdbbank.calenda.models.base.BaseEntity;
+import com.rdbbank.calenda.models.solar.Holiday;
 
 import javax.persistence.*;
 

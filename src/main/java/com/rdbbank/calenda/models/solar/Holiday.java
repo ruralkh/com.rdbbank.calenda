@@ -1,4 +1,4 @@
-package com.rdbbank.calenda.models;
+package com.rdbbank.calenda.models.solar;
 
 import com.rdbbank.calenda.models.base.BaseEntity;
 import com.rdbbank.calenda.models.base.BaseProThree;
