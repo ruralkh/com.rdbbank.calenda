@@ -12,4 +12,6 @@ import java.util.List;
  */
 public interface DateNumDayDeRepository extends PagingAndSortingRepository<DateNumberDayDetail,Long> {
     List<DateNumberDayDetail> findByYearId(Long id);
+
+    List<DateNumberDayDetail> findByYearIdAndMonthId(Long yearId,Long monthId);
 }

@@ -34,4 +34,9 @@ public class DateNumDayDeServiceImpl implements DateNumDayDeService{
     public List<DateNumberDayDetail> findByYear(Long id) {
         return dateNumDayDeRepository.findByYearId(id);
     }
+
+    @Override
+    public List<DateNumberDayDetail> findByYearIdAndMonthId(Long yearId, Long monthId) {
+        return dateNumDayDeRepository.findByYearIdAndMonthId(yearId,monthId);
+    }
 }

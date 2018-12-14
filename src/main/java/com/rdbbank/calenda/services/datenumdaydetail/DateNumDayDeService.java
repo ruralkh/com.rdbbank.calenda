@@ -14,4 +14,6 @@ public interface DateNumDayDeService {
     void save(DateNumberDayDetail dateNumberDayDetail);
 
     List<DateNumberDayDetail> findByYear(Long id);
+
+    List<DateNumberDayDetail> findByYearIdAndMonthId(Long yearId,Long monthId);
 }
