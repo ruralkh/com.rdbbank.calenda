@@ -1,15 +1,14 @@
 package com.rdbbank.calenda.models;
 
-import com.rdbbank.calenda.models.lunar.DayNumLunar;
-import com.rdbbank.calenda.models.lunar.MonthLunar;
-import com.rdbbank.calenda.models.lunar.YearBuddhaEra;
-import com.rdbbank.calenda.models.lunar.YearLunar;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.rdbbank.calenda.models.lunar.*;
 import com.rdbbank.calenda.models.solar.DateNumber;
 import com.rdbbank.calenda.models.solar.Day;
 import com.rdbbank.calenda.models.solar.Month;
 import com.rdbbank.calenda.models.solar.Year;
 
 import javax.persistence.*;
+import java.util.Set;
 
 /**
  * Create By: Ron Rith
@@ -38,6 +37,32 @@ public class DateNumberDayDetail{
     private YearBuddhaEra yearBuddhaEra;
 
     private DayNumLunar dayNumLunar;
+
+    private MoonNumber moonNumber;
+
+    private Set<Event> event;
+
+    @JsonIgnore
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(name = "td_dn_event_detail", joinColumns = @JoinColumn(name = "dnd_id"), inverseJoinColumns = @JoinColumn(name = "event_id"))
+    public Set<Event> getEvent() {
+        return event;
+    }
+
+    public void setEvent(Set<Event> event) {
+        this.event = event;
+    }
+
+
+    @ManyToOne
+    @JoinColumn(name = "moon_id")
+    public MoonNumber getMoonNumber() {
+        return moonNumber;
+    }
+
+    public void setMoonNumber(MoonNumber moonNumber) {
+        this.moonNumber = moonNumber;
+    }
 
     @ManyToOne
     @JoinColumn(name = "day_num_lunar_id")

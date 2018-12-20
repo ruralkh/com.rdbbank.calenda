@@ -18,6 +18,16 @@ public class DayNumLunar extends BaseProThree{
     //day_kh_lunar (kert,roch)
     private DayNumLunarType dayNumLunarType;
 
+    @Column(name = "dn_lunar_type")
+    @Enumerated(EnumType.STRING)
+    public DayNumLunarType getDayNumLunarType() {
+        return dayNumLunarType;
+    }
+
+    public void setDayNumLunarType(DayNumLunarType dayNumLunarType) {
+        this.dayNumLunarType = dayNumLunarType;
+    }
+
     private Set<MonthLunar> monthLunars;
 
     private Set<DateNumberDayDetail> dateNumberDayDetails;
@@ -31,9 +41,8 @@ public class DayNumLunar extends BaseProThree{
         this.dateNumberDayDetails = dateNumberDayDetails;
     }
 
-    public DayNumLunar(String num, Integer numEn, String des, String desEn, SecUser secUser, DayNumLunarType dayNumLunarType, Set<MonthLunar> monthLunars, Set<DateNumberDayDetail> dateNumberDayDetails) {
+    public DayNumLunar(String num, Integer numEn, String des, String desEn, SecUser secUser, DayNumLunarType dayNumLunarType,Set<DateNumberDayDetail> dateNumberDayDetails) {
         super(num, numEn, des, desEn, secUser);
-        this.dayNumLunarType = dayNumLunarType;
         this.monthLunars = monthLunars;
         this.dateNumberDayDetails = dateNumberDayDetails;
     }
@@ -47,16 +56,6 @@ public class DayNumLunar extends BaseProThree{
 
     public void setMonthLunars(Set<MonthLunar> monthLunars) {
         this.monthLunars = monthLunars;
-    }
-
-    @Column(name = "dn_lunar_type")
-    @Enumerated(EnumType.STRING)
-    public DayNumLunarType getDayNumLunarType() {
-        return dayNumLunarType;
-    }
-
-    public void setDayNumLunarType(DayNumLunarType dayNumLunarType) {
-        this.dayNumLunarType = dayNumLunarType;
     }
 
     public DayNumLunar(){

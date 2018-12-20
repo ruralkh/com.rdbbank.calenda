@@ -18,17 +18,6 @@ public class MonthLunar extends BaseProThree{
     //month_kh_lunar (Meak,Bus) ; lunar_onth
     private Set<YearLunar> yearLunars;
 
-    private Set<DateNumberDayDetail> dateNumberDayDetails;
-
-    @OneToMany(mappedBy = "monthLunar",cascade = CascadeType.ALL,orphanRemoval = true)
-    public Set<DateNumberDayDetail> getDateNumberDayDetails() {
-        return dateNumberDayDetails;
-    }
-
-    public void setDateNumberDayDetails(Set<DateNumberDayDetail> dateNumberDayDetails) {
-        this.dateNumberDayDetails = dateNumberDayDetails;
-    }
-
     @JsonIgnore
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "td_month_lunar_detail", joinColumns = @JoinColumn(name = "month_lunar_id"), inverseJoinColumns = @JoinColumn(name = "year_lunar_id"))
@@ -44,9 +33,12 @@ public class MonthLunar extends BaseProThree{
         this.yearLunars = yearLunars;
     }
 
-    public MonthLunar(String num, Integer numEn, String des, String desEn, SecUser secUser, Set<YearLunar> yearLunars, Set<DateNumberDayDetail> dateNumberDayDetails) {
+    public MonthLunar(String num, Integer numEn, String des, String desEn, SecUser secUser, Set<YearLunar> yearLunars) {
         super(num, numEn, des, desEn, secUser);
         this.yearLunars = yearLunars;
-        this.dateNumberDayDetails = dateNumberDayDetails;
+    }
+
+    public MonthLunar(){
+
     }
 }

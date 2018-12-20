@@ -30,7 +30,7 @@ public interface MonthMasterService {
                                       List<Integer> numThursday,
                                       List<Integer> numFriday,
                                       List<Integer> numSaturday,Integer numMonth);
-    Map<String,List<Integer>> getNumEachDays(List<DateNumberDayDetail> dateNumberDayDetails);
+    Map<String,List<Integer>> getNumEachDays(List<DateNumberDayDetail> dateNumberDayDetails,int monthNum);
 
     List<MonthMaster> getMonthMasterCOColumns(List<MonthMaster> monthMasters,List<DateNumberDayDetail> dateNumberDayDetails);
 }

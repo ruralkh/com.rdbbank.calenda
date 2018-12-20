@@ -36,16 +36,17 @@ public class MonthMasterController {
 
         List<MonthMaster> monthMasters = new ArrayList<>();
         // number of each days
-        Map<String,List<Integer>> numEachDays = monthMasterService.getNumEachDays(dateNumberDayDetails);
+        // monthNum = 1 is January
+        Map<String,List<Integer>> numEachDays = monthMasterService.getNumEachDays(dateNumberDayDetails,1);
         // days in a month not yet sort
         //one month getMonthMasters can noted by month
         monthMasters = monthMasterService.getMonthMasters(numEachDays.get(BaseDays.SUNDAY), numEachDays.get(BaseDays.MONDAY), numEachDays.get(BaseDays.TUESDAY)
                 , numEachDays.get(BaseDays.WEDNESDAY), numEachDays.get(BaseDays.THURSDAY), numEachDays.get(BaseDays.FRIDAY), numEachDays.get(BaseDays.SATURDAY),1);
         // days in a month sorted
         List<MonthMaster> monthMasterCoColumns = monthMasterService.getMonthMasterCOColumns(monthMasters,dateNumberDayDetails);
-        for(MonthMaster master: monthMasterCoColumns){
+        /*for(MonthMaster master: monthMasterCoColumns){
             monthMasterService.save(master);
-        }
+        }*/
         return "home";
     }
 

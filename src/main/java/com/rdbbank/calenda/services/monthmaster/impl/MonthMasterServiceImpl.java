@@ -157,7 +157,7 @@ public class MonthMasterServiceImpl implements MonthMasterService{
     }
 
     @Override
-    public Map<String,List<Integer>> getNumEachDays(List<DateNumberDayDetail> dateNumberDayDetails){
+    public Map<String,List<Integer>> getNumEachDays(List<DateNumberDayDetail> dateNumberDayDetails,int monthNumber){
         List<Integer> numSundays = new ArrayList<>();
         List<Integer> numMondays = new ArrayList<>();
         List<Integer> numTuesday = new ArrayList<>();
@@ -169,8 +169,7 @@ public class MonthMasterServiceImpl implements MonthMasterService{
         Map<String,List<Integer>> numWeekDays = new HashMap<>();
 
         for(DateNumberDayDetail dayDetail: dateNumberDayDetails){
-            if (dayDetail.getMonth() != null) {
-                if (dayDetail.getMonth().getId() == 1) {
+            if (dayDetail.getMonth() != null && dayDetail.getMonth().getId() == monthNumber) {
                     if (dayDetail.getDateNumber().getNumEn() != null && dayDetail.getDay().getDesEn() != null) {
                         switch (dayDetail.getDay().getDesEn()) {
                             case BaseDays.SUNDAY:
@@ -195,7 +194,6 @@ public class MonthMasterServiceImpl implements MonthMasterService{
                                 numSaturday.add(dayDetail.getDateNumber().getNumEn());
                                 break;
                         }
-                    }
                 }
             }
         }
@@ -227,6 +225,8 @@ public class MonthMasterServiceImpl implements MonthMasterService{
         List<String> frisListNum = new ArrayList<>();
         List<String> satsdaysListNum = new ArrayList<>();
 
+  /*      List<String> mondaysMonthLunar = new ArrayList<>();*/
+
         for (MonthMaster m : monthMasters) {
             mondaysListNum.add(m.getMonday());
             tuesdaysListNum.add(m.getTuesday());
@@ -234,6 +234,7 @@ public class MonthMasterServiceImpl implements MonthMasterService{
             thurdaysListNum.add(m.getThursday());
             frisListNum.add(m.getFriday());
             satsdaysListNum.add(m.getSaturday());
+           /* mondaysMonthLunar.add(m.getMondayMonthLunar());*/
         }
         for (int i = 0; i < monthMasters.size(); i++) {
             monthMasters.get(i).setMonth(dateNumberDayDetails.get(i).getMonth().getDesEn().toString());
@@ -296,6 +297,7 @@ public class MonthMasterServiceImpl implements MonthMasterService{
             } else {
                 if (bMonday == Boolean.TRUE) {
                     monthMasters.get(i).setMonday(mondaysListNum.get(i - 1));
+                    monthMasters.get(i).setMondayDayNumLunar(mondaysListNum.get(i));
                 }
                 if (bTuesday == Boolean.TRUE) {
                     monthMasters.get(i).setTuesday(tuesdaysListNum.get(i - 1));
