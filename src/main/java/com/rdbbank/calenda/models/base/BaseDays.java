@@ -12,4 +12,45 @@ public class BaseDays {
     public static final String FRIDAY = "Friday";
     public static final String SATURDAY = "Saturday";
     public static final String SUNDAY = "Sunday";
+    /*dayNumLunar*/
+    public static final String MONDAY_DAYNUMLUNAR = "mondayDayNumLunar";
+    public static final String TUESDAY_DAYNUMLUNAR = "tuesdayDayNumLunar";
+    public static final String WEDNESDAY_DAYNUMLUNAR = "wednesdayDayNumLunar";
+    public static final String THURSDAY_DAYNUMLUNAR = "thursdayDayNumLunar";
+    public static final String FRIDAY_DAYNUMLUNAR = "fridayDayNumLunar";
+    public static final String SATURDAY_DAYNUMLUNAR = "saturdayDayNumLunar";
+    public static final String SUNDAY_DAYNUMLUNAR = "sundayDayNumLunar";
+    /*dayMoonNumber*/
+    public static final String MONDAY_MOONNUMBER = "mondayMoonNumber";
+    public static final String TUESDAY_MOONNUMBER = "tuesdayMoonNumber";
+    public static final String WEDNESDAY_MOONNUMBER = "wednesdayMoonNumber";
+    public static final String THURSDAY_MOONNUMBER = "thursdayMoonNumber";
+    public static final String FRIDAY_MOONNUMBER = "fridayMoonNumber";
+    public static final String SATURDAY_MOONNUMBER = "saturdayMoonNumber";
+    public static final String SUNDAY_MOONNUMBER = "sundayMoonNumber";
+    /*MonthLunar*/
+    public static final String MONDAY_MONTHLUNAR = "mondayMonthLunar";
+    public static final String TUESDAY_MONTHLUNAR = "tuesdayMonthLunar";
+    public static final String WEDNESDAY_MONTHLUNAR = "wednesdayMonthLunar";
+    public static final String THURSDAY_MONTHLUNAR = "thursdayMonthLunar";
+    public static final String FRIDAY_MONTHLUNAR = "fridayMonthLunar";
+    public static final String SATURDAY_MONTHLUNAR = "saturdayMonthLunar";
+    public static final String SUNDAY_MONTHLUNAR = "sundayMonthLunar";
+    /*Holiday*/
+    public static final String MONDAY_HOLIDAY = "mondayHoliday";
+    public static final String TUESDAY_HOLIDAY = "tuesdayHoliday";
+    public static final String WEDNESDAY_HOLIDAY = "wednesdayHoliday";
+    public static final String THURSDAY_HOLIDAY = "thursdayHoliday";
+    public static final String FRIDAY_HOLIDAY = "fridayHoliday";
+    public static final String SATURDAY_HOLIDAY = "saturdayHoliday";
+    public static final String SUNDAY_HOLIDAY = "sundayHoliday";
+    /*Holiday*/
+    public static final String MONDAY_EVENT = "mondayEvent";
+    public static final String TUESDAY_EVENT = "tuesdayEvent";
+    public static final String WEDNESDAY_EVENT = "wednesdayEvent";
+    public static final String THURSDAY_EVENT = "thursdayEvent";
+    public static final String FRIDAY_EVENT = "fridayEvent";
+    public static final String SATURDAY_EVENT = "saturdayEvent";
+    public static final String SUNDAY_EVENT = "sundayEvent";
+
 }

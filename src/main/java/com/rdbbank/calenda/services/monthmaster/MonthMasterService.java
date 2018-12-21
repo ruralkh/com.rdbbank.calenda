@@ -13,24 +13,41 @@ import java.util.Map;
 public interface MonthMasterService {
     void save(MonthMaster monthMaster);
 
-    MonthMaster getMonthMasterFive(List<Integer> numDays, String dayType);
+    MonthMaster getMonthMasterFive(List<String> numDays, String dayType);
 
-    MonthMaster getMonthMaster(List<Integer> numSundays,
-                               List<Integer> numMondays,
-                               List<Integer> numTuesday,
-                               List<Integer> numWednesday,
-                               List<Integer> numThursday,
-                               List<Integer> numFriday,
-                               List<Integer> numSaturday, int i);
+    MonthMaster getMonthMaster(List<String> numSundays,
+                               List<String> numMondays,
+                               List<String> numTuesday,
+                               List<String> numWednesday,
+                               List<String> numThursday,
+                               List<String> numFriday,
+                               List<String> numSaturday,
+                               List<String> numSundaysMonthLunar,
+                               List<String> numMondaysMonthLunar,
+                               List<String> numTuesdayMonthLunar,
+                               List<String> numWednesdayMonthLunar,
+                               List<String> numThursdayMonthLunar,
+                               List<String> numFridayMonthLunar,
+                               List<String> numSaturdayMonthLunar,
+                               int i);
 
-    List<MonthMaster> getMonthMasters(List<Integer> numSundays,
-                                      List<Integer> numMondays,
-                                      List<Integer> numTuesday,
-                                      List<Integer> numWednesday,
-                                      List<Integer> numThursday,
-                                      List<Integer> numFriday,
-                                      List<Integer> numSaturday,Integer numMonth);
-    Map<String,List<Integer>> getNumEachDays(List<DateNumberDayDetail> dateNumberDayDetails,int monthNum);
+    List<MonthMaster> getMonthMasters(List<String> numSundays,
+                                      List<String> numMondays,
+                                      List<String> numTuesday,
+                                      List<String> numWednesday,
+                                      List<String> numThursday,
+                                      List<String> numFriday,
+                                      List<String> numSaturday,
+                                      List<String> numSundaysMonthLunar,
+                                      List<String> numMondaysMonthLunar,
+                                      List<String> numTuesdayMonthLunar,
+                                      List<String> numWednesdayMonthLunar,
+                                      List<String> numThursdayMonthLunar,
+                                      List<String> numFridayMonthLunar,
+                                      List<String> numSaturdayMonthLunar,
+                                      Integer numMonth
+    );
+    Map<String,List<String>> getNumEachDays(List<DateNumberDayDetail> dateNumberDayDetails,int monthNum);
 
     List<MonthMaster> getMonthMasterCOColumns(List<MonthMaster> monthMasters,List<DateNumberDayDetail> dateNumberDayDetails);
 }

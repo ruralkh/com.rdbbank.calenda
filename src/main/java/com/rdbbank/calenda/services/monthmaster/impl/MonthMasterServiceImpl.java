@@ -31,13 +31,21 @@ public class MonthMasterServiceImpl implements MonthMasterService{
     }
 
     @Override
-    public List<MonthMaster> getMonthMasters(List<Integer> numSundays,
-                                             List<Integer> numMondays,
-                                             List<Integer> numTuesday,
-                                             List<Integer> numWednesday,
-                                             List<Integer> numThursday,
-                                             List<Integer> numFriday,
-                                             List<Integer> numSaturday,Integer numMonth
+    public List<MonthMaster> getMonthMasters(List<String> numSundays,
+                                             List<String> numMondays,
+                                             List<String> numTuesday,
+                                             List<String> numWednesday,
+                                             List<String> numThursday,
+                                             List<String> numFriday,
+                                             List<String> numSaturday,
+                                             List<String> numSundaysMonthLunar,
+                                             List<String> numMondaysMonthLunar,
+                                             List<String> numTuesdayMonthLunar,
+                                             List<String> numWednesdayMonthLunar,
+                                             List<String> numThursdayMonthLunar,
+                                             List<String> numFridayMonthLunar,
+                                             List<String> numSaturdayMonthLunar,
+                                             Integer numMonth
     ){
         MonthMaster monthMaster = new MonthMaster();
         MonthMaster monthMasterFiveSunday = new MonthMaster();
@@ -47,6 +55,14 @@ public class MonthMasterServiceImpl implements MonthMasterService{
         MonthMaster monthMasterFiveThursday = new MonthMaster();
         MonthMaster monthMasterFiveFriday = new MonthMaster();
         MonthMaster monthMasterFiveSaturday = new MonthMaster();
+        /*MonthLunar*/
+        MonthMaster monthMasterFiveSundayMonthLunar = new MonthMaster();
+        MonthMaster monthMasterFiveMondayMonthLunar = new MonthMaster();
+        MonthMaster monthMasterFiveTuesdayMonthLunar = new MonthMaster();
+        MonthMaster monthMasterFiveWednesdayMonthLunar = new MonthMaster();
+        MonthMaster monthMasterFiveThursdayMonthLunar = new MonthMaster();
+        MonthMaster monthMasterFiveFridayMonthLunar = new MonthMaster();
+        MonthMaster monthMasterFiveSaturdayMonthLunar = new MonthMaster();
         MonthMaster monthMasterHelper = new MonthMaster();
 
 
@@ -73,6 +89,28 @@ public class MonthMasterServiceImpl implements MonthMasterService{
             if (numSaturday.size() == 5) {
                 monthMasterFiveSaturday = getMonthMasterFive(numSaturday, BaseDays.SATURDAY);
             }
+            /*MonthLunar*/
+            if (numSundaysMonthLunar.size() == 5) {
+                monthMasterFiveSundayMonthLunar = getMonthMasterFive(numSundaysMonthLunar, BaseDays.SUNDAY);
+            }
+            if (numMondaysMonthLunar.size() == 5) {
+                monthMasterFiveMondayMonthLunar = getMonthMasterFive(numMondaysMonthLunar, BaseDays.MONDAY);
+            }
+            if (numTuesdayMonthLunar.size() == 5) {
+                monthMasterFiveTuesdayMonthLunar = getMonthMasterFive(numTuesdayMonthLunar, BaseDays.TUESDAY);
+            }
+            if (numWednesdayMonthLunar.size() == 5) {
+                monthMasterFiveWednesdayMonthLunar = getMonthMasterFive(numWednesdayMonthLunar, BaseDays.WEDNESDAY);
+            }
+            if (numThursdayMonthLunar.size() == 5) {
+                monthMasterFiveThursdayMonthLunar = getMonthMasterFive(numThursdayMonthLunar, BaseDays.THURSDAY);
+            }
+            if (numFridayMonthLunar.size() == 5) {
+                monthMasterFiveFridayMonthLunar = getMonthMasterFive(numFridayMonthLunar, BaseDays.FRIDAY);
+            }
+            if (numSaturdayMonthLunar.size() == 5) {
+                monthMasterFiveSaturdayMonthLunar = getMonthMasterFive(numSaturdayMonthLunar, BaseDays.SATURDAY);
+            }
         }
 
         monthMasterHelper.setMonday(monthMasterFiveMonday.getMonday());
@@ -82,9 +120,19 @@ public class MonthMasterServiceImpl implements MonthMasterService{
         monthMasterHelper.setFriday(monthMasterFiveFriday.getFriday());
         monthMasterHelper.setSaturday(monthMasterFiveSaturday.getSaturday());
         monthMasterHelper.setSunday(monthMasterFiveSunday.getSunday());
+        /*MonthLunar*/
+        monthMasterHelper.setMonday(monthMasterFiveMondayMonthLunar.getMonday());
+        monthMasterHelper.setTuesday(monthMasterFiveTuesdayMonthLunar.getTuesday());
+        monthMasterHelper.setWednesday(monthMasterFiveWednesdayMonthLunar.getWednesday());
+        monthMasterHelper.setThursday(monthMasterFiveThursdayMonthLunar.getThursday());
+        monthMasterHelper.setFriday(monthMasterFiveFridayMonthLunar.getFriday());
+        monthMasterHelper.setSaturday(monthMasterFiveSaturdayMonthLunar.getSaturday());
+        monthMasterHelper.setSunday(monthMasterFiveSundayMonthLunar.getSunday());
 
         for (int i = 0; i < 4; i++) {
-            monthMaster = getMonthMaster(numSundays, numMondays, numTuesday, numWednesday, numThursday, numFriday, numSaturday, i);
+            monthMaster = getMonthMaster(numSundays, numMondays, numTuesday, numWednesday, numThursday, numFriday, numSaturday,
+                    numSundaysMonthLunar, numMondaysMonthLunar, numTuesdayMonthLunar, numWednesdayMonthLunar, numThursdayMonthLunar, numFridayMonthLunar, numSaturdayMonthLunar,
+                    i);
             monthMasters.add(monthMaster);
         }
 
@@ -93,13 +141,20 @@ public class MonthMasterServiceImpl implements MonthMasterService{
     }
 
     @Override
-    public MonthMaster getMonthMaster(List<Integer> numSundays,
-                                      List<Integer> numMondays,
-                                      List<Integer> numTuesday,
-                                      List<Integer> numWednesday,
-                                      List<Integer> numThursday,
-                                      List<Integer> numFriday,
-                                      List<Integer> numSaturday, int i) {
+    public MonthMaster getMonthMaster(List<String> numSundays,
+                                      List<String> numMondays,
+                                      List<String> numTuesday,
+                                      List<String> numWednesday,
+                                      List<String> numThursday,
+                                      List<String> numFriday,
+                                      List<String> numSaturday,
+                                      List<String> numSundaysMonthLunar,
+                                      List<String> numMondaysMonthLunar,
+                                      List<String> numTuesdayMonthLunar,
+                                      List<String> numWednesdayMonthLunar,
+                                      List<String> numThursdayMonthLunar,
+                                      List<String> numFridayMonthLunar,
+                                      List<String> numSaturdayMonthLunar,int i) {
 
         MonthMaster monthMaster = new MonthMaster();
         if (numSundays.get(i) != null) {
@@ -123,12 +178,34 @@ public class MonthMasterServiceImpl implements MonthMasterService{
         if (numSaturday.get(i) != null) {
             monthMaster.setSaturday(numSaturday.get(i) .toString());
         }
+        /*MonthLunar*/
+        if (numSundaysMonthLunar.get(i) != null) {
+            monthMaster.setSundayMonthLunar(numSundaysMonthLunar.get(i).toString());
+        }
+        if (numMondaysMonthLunar.get(i) != null) {
+            monthMaster.setMonday(numMondays.get(i).toString());
+        }
+        if (numTuesdayMonthLunar.get(i) != null) {
+            monthMaster.setTuesday(numTuesday.get(i) .toString());
+        }
+        if (numWednesdayMonthLunar.get(i) != null) {
+            monthMaster.setWednesday(numWednesday.get(i).toString());
+        }
+        if (numThursdayMonthLunar.get(i) != null) {
+            monthMaster.setThursday(numThursday.get(i) .toString());
+        }
+        if (numFridayMonthLunar.get(i) != null) {
+            monthMaster.setFriday(numFriday.get(i) .toString());
+        }
+        if (numSaturdayMonthLunar.get(i) != null) {
+            monthMaster.setSaturday(numSaturday.get(i) .toString());
+        }
 
         return monthMaster;
     }
 
     @Override
-    public MonthMaster getMonthMasterFive(List<Integer> numDays, String dayType) {
+    public MonthMaster getMonthMasterFive(List<String> numDays, String dayType) {
         MonthMaster monthMaster = new MonthMaster();
         switch (dayType) {
             case BaseDays.MONDAY:
@@ -152,46 +229,83 @@ public class MonthMasterServiceImpl implements MonthMasterService{
             case BaseDays.SUNDAY:
                 monthMaster.setSunday(numDays.get(4).toString());
                 break;
+                /*MonthLunar*/
+            case BaseDays.MONDAY_MONTHLUNAR:
+                monthMaster.setMonday(numDays.get(4).toString());
+                break;
+            case BaseDays.TUESDAY_MONTHLUNAR:
+                monthMaster.setTuesday(numDays.get(4).toString());
+                break;
+            case BaseDays.WEDNESDAY_MONTHLUNAR:
+                monthMaster.setWednesday(numDays.get(4).toString());
+                break;
+            case BaseDays.THURSDAY_MONTHLUNAR:
+                monthMaster.setThursday(numDays.get(4).toString());
+                break;
+            case BaseDays.FRIDAY_MONTHLUNAR:
+                monthMaster.setFriday(numDays.get(4).toString());
+                break;
+            case BaseDays.SATURDAY_MONTHLUNAR:
+                monthMaster.setSaturday(numDays.get(4).toString());
+                break;
+            case BaseDays.SUNDAY_MONTHLUNAR:
+                monthMaster.setSunday(numDays.get(4).toString());
+                break;
         }
         return monthMaster;
     }
 
     @Override
-    public Map<String,List<Integer>> getNumEachDays(List<DateNumberDayDetail> dateNumberDayDetails,int monthNumber){
-        List<Integer> numSundays = new ArrayList<>();
-        List<Integer> numMondays = new ArrayList<>();
-        List<Integer> numTuesday = new ArrayList<>();
-        List<Integer> numWednesday = new ArrayList<>();
-        List<Integer> numThursday = new ArrayList<>();
-        List<Integer> numFriday = new ArrayList<>();
-        List<Integer> numSaturday = new ArrayList<>();
+    public Map<String,List<String>> getNumEachDays(List<DateNumberDayDetail> dateNumberDayDetails,int monthNumber){
+        List<String> numSundays = new ArrayList<>();
+        List<String> numMondays = new ArrayList<>();
+        List<String> numTuesday = new ArrayList<>();
+        List<String> numWednesday = new ArrayList<>();
+        List<String> numThursday = new ArrayList<>();
+        List<String> numFriday = new ArrayList<>();
+        List<String> numSaturday = new ArrayList<>();
+        /*DayNumLunar*/
+        List<String> numSundaysMonthLunar = new ArrayList<>();
+        List<String> numMondaysMonthLunar = new ArrayList<>();
+        List<String> numTuesdayMonthLunar = new ArrayList<>();
+        List<String> numWednesdayMonthLunar = new ArrayList<>();
+        List<String> numThursdayMonthLunar = new ArrayList<>();
+        List<String> numFridayMonthLunar = new ArrayList<>();
+        List<String> numSaturdayMonthLunar = new ArrayList<>();
 
-        Map<String,List<Integer>> numWeekDays = new HashMap<>();
+        Map<String,List<String>> numWeekDays = new HashMap<>();
 
         for(DateNumberDayDetail dayDetail: dateNumberDayDetails){
             if (dayDetail.getMonth() != null && dayDetail.getMonth().getId() == monthNumber) {
                     if (dayDetail.getDateNumber().getNumEn() != null && dayDetail.getDay().getDesEn() != null) {
                         switch (dayDetail.getDay().getDesEn()) {
                             case BaseDays.SUNDAY:
-                                numSundays.add(dayDetail.getDateNumber().getNumEn());
+                                numSundays.add(dayDetail.getDateNumber().getNumEn().toString());
+                                numSundaysMonthLunar.add(dayDetail.getMonthLunar().getDes());
                                 break;
                             case BaseDays.MONDAY:
-                                numMondays.add(dayDetail.getDateNumber().getNumEn());
+                                numMondays.add(dayDetail.getDateNumber().getNumEn().toString());
+                                numMondaysMonthLunar.add(dayDetail.getMonthLunar().getDes());
                                 break;
                             case BaseDays.TUESDAY:
-                                numTuesday.add(dayDetail.getDateNumber().getNumEn());
+                                numTuesday.add(dayDetail.getDateNumber().getNumEn().toString());
+                                numTuesdayMonthLunar.add(dayDetail.getMonthLunar().getDes());
                                 break;
                             case BaseDays.WEDNESDAY:
-                                numWednesday.add(dayDetail.getDateNumber().getNumEn());
+                                numWednesday.add(dayDetail.getDateNumber().getNumEn().toString());
+                                numWednesdayMonthLunar.add(dayDetail.getMonthLunar().getDes());
                                 break;
                             case BaseDays.THURSDAY:
-                                numThursday.add(dayDetail.getDateNumber().getNumEn());
+                                numThursday.add(dayDetail.getDateNumber().getNumEn().toString());
+                                numThursdayMonthLunar.add(dayDetail.getMonthLunar().getDes());
                                 break;
                             case BaseDays.FRIDAY:
-                                numFriday.add(dayDetail.getDateNumber().getNumEn());
+                                numFriday.add(dayDetail.getDateNumber().getNumEn().toString());
+                                numFridayMonthLunar.add(dayDetail.getMonthLunar().getDes());
                                 break;
                             case BaseDays.SATURDAY:
-                                numSaturday.add(dayDetail.getDateNumber().getNumEn());
+                                numSaturday.add(dayDetail.getDateNumber().getNumEn().toString());
+                                numSaturdayMonthLunar.add(dayDetail.getMonthLunar().getDes());
                                 break;
                         }
                 }
@@ -205,6 +319,14 @@ public class MonthMasterServiceImpl implements MonthMasterService{
         numWeekDays.put(BaseDays.THURSDAY,numThursday);
         numWeekDays.put(BaseDays.FRIDAY,numFriday);
         numWeekDays.put(BaseDays.SATURDAY,numSaturday);
+        /*MonthLunar*/
+        numWeekDays.put(BaseDays.SUNDAY_MONTHLUNAR,numSundaysMonthLunar);
+        numWeekDays.put(BaseDays.MONDAY_MONTHLUNAR,numMondaysMonthLunar);
+        numWeekDays.put(BaseDays.TUESDAY_MONTHLUNAR,numTuesdayMonthLunar);
+        numWeekDays.put(BaseDays.WEDNESDAY_MONTHLUNAR,numWednesdayMonthLunar);
+        numWeekDays.put(BaseDays.THURSDAY_MONTHLUNAR,numThursdayMonthLunar);
+        numWeekDays.put(BaseDays.FRIDAY_MONTHLUNAR,numFridayMonthLunar);
+        numWeekDays.put(BaseDays.SATURDAY_MONTHLUNAR,numSaturdayMonthLunar);
 
         return numWeekDays;
     }
@@ -297,7 +419,6 @@ public class MonthMasterServiceImpl implements MonthMasterService{
             } else {
                 if (bMonday == Boolean.TRUE) {
                     monthMasters.get(i).setMonday(mondaysListNum.get(i - 1));
-                    monthMasters.get(i).setMondayDayNumLunar(mondaysListNum.get(i));
                 }
                 if (bTuesday == Boolean.TRUE) {
                     monthMasters.get(i).setTuesday(tuesdaysListNum.get(i - 1));
