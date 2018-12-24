@@ -41,15 +41,34 @@ public class MonthMasterController {
         // days in a month not yet sort
         //one month getMonthMasters can noted by month
         monthMasters = monthMasterService.getMonthMasters(
-                numEachDays.get(BaseDays.SUNDAY), numEachDays.get(BaseDays.MONDAY), numEachDays.get(BaseDays.TUESDAY)
-                , numEachDays.get(BaseDays.WEDNESDAY), numEachDays.get(BaseDays.THURSDAY), numEachDays.get(BaseDays.FRIDAY), numEachDays.get(BaseDays.SATURDAY),
-                numEachDays.get(BaseDays.SUNDAY_MONTHLUNAR), numEachDays.get(BaseDays.MONDAY_MONTHLUNAR), numEachDays.get(BaseDays.TUESDAY_MONTHLUNAR)
-                , numEachDays.get(BaseDays.WEDNESDAY_MONTHLUNAR), numEachDays.get(BaseDays.THURSDAY_MONTHLUNAR), numEachDays.get(BaseDays.FRIDAY_MONTHLUNAR), numEachDays.get(BaseDays.SATURDAY_MONTHLUNAR),
+                numEachDays.get(BaseDays.SUNDAY),
+                numEachDays.get(BaseDays.MONDAY),
+                numEachDays.get(BaseDays.TUESDAY),
+                numEachDays.get(BaseDays.WEDNESDAY),
+                numEachDays.get(BaseDays.THURSDAY),
+                numEachDays.get(BaseDays.FRIDAY),
+                numEachDays.get(BaseDays.SATURDAY),
+
+                numEachDays.get(BaseDays.SUNDAY_MONTHLUNAR),
+                numEachDays.get(BaseDays.MONDAY_MONTHLUNAR),
+                numEachDays.get(BaseDays.TUESDAY_MONTHLUNAR),
+                numEachDays.get(BaseDays.WEDNESDAY_MONTHLUNAR),
+                numEachDays.get(BaseDays.THURSDAY_MONTHLUNAR),
+                numEachDays.get(BaseDays.FRIDAY_MONTHLUNAR),
+                numEachDays.get(BaseDays.SATURDAY_MONTHLUNAR),
+
+                numEachDays.get(BaseDays.SUNDAY_DAYNUMLUNAR),
+                numEachDays.get(BaseDays.MONDAY_DAYNUMLUNAR),
+                numEachDays.get(BaseDays.TUESDAY_DAYNUMLUNAR),
+                numEachDays.get(BaseDays.WEDNESDAY_DAYNUMLUNAR),
+                numEachDays.get(BaseDays.THURSDAY_DAYNUMLUNAR),
+                numEachDays.get(BaseDays.FRIDAY_DAYNUMLUNAR),
+                numEachDays.get(BaseDays.SATURDAY_DAYNUMLUNAR),
                 1)
         ;
         // days in a month sorted
         List<MonthMaster> monthMasterCoColumns = monthMasterService.getMonthMasterCOColumns(monthMasters,dateNumberDayDetails);
-        /*for(MonthMaster master: monthMasterCoColumns){
+     /*   for(MonthMaster master: monthMasterCoColumns){
             monthMasterService.save(master);
         }*/
         return "home";

@@ -29,6 +29,13 @@ public interface MonthMasterService {
                                List<String> numThursdayMonthLunar,
                                List<String> numFridayMonthLunar,
                                List<String> numSaturdayMonthLunar,
+                               List<String> numSundaysDayNumLunar,
+                               List<String> numMondaysDayNumLunar,
+                               List<String> numTuesdayDayNumLunar,
+                               List<String> numWednesdayDayNumLunar,
+                               List<String> numThursdayDayNumLunar,
+                               List<String> numFridayDayNumLunar,
+                               List<String> numSaturdayDayNumLunar,
                                int i);
 
     List<MonthMaster> getMonthMasters(List<String> numSundays,
@@ -38,6 +45,7 @@ public interface MonthMasterService {
                                       List<String> numThursday,
                                       List<String> numFriday,
                                       List<String> numSaturday,
+
                                       List<String> numSundaysMonthLunar,
                                       List<String> numMondaysMonthLunar,
                                       List<String> numTuesdayMonthLunar,
@@ -45,6 +53,14 @@ public interface MonthMasterService {
                                       List<String> numThursdayMonthLunar,
                                       List<String> numFridayMonthLunar,
                                       List<String> numSaturdayMonthLunar,
+
+                                      List<String> numSundaysDayNumLunar,
+                                      List<String> numMondaysDayNumLunar,
+                                      List<String> numTuesdayDayNumLunar,
+                                      List<String> numWednesdayDayNumLunar,
+                                      List<String> numThursdayDayNumLunar,
+                                      List<String> numFridayDayNumLunar,
+                                      List<String> numSaturdayDayNumLunar,
                                       Integer numMonth
     );
     Map<String,List<String>> getNumEachDays(List<DateNumberDayDetail> dateNumberDayDetails,int monthNum);

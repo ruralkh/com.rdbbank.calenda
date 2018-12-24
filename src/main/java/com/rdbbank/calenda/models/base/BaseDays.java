@@ -36,6 +36,18 @@ public class BaseDays {
     public static final String FRIDAY_MONTHLUNAR = "fridayMonthLunar";
     public static final String SATURDAY_MONTHLUNAR = "saturdayMonthLunar";
     public static final String SUNDAY_MONTHLUNAR = "sundayMonthLunar";
+    public static final String MONTHLUNAR_MAR = "Margasirsha";
+    public static final String MONTHLUNAR_PAU = "Pausha";
+    public static final String MONTHLUNAR_MAG = "Magha";
+    public static final String MONTHLUNAR_PHA = "Phalguna";
+    public static final String MONTHLUNAR_CHA = "Chaitra";
+    public static final String MONTHLUNAR_VAI = "Vaisakha";
+    public static final String MONTHLUNAR_JYA = "Jyaishtha";
+    public static final String MONTHLUNAR_ASH = "Ashadha";
+    public static final String MONTHLUNAR_SRA = "Sravana";
+    public static final String MONTHLUNAR_BHA = "Bhadrapada";
+    public static final String MONTHLUNAR_ASV = "Asvina";
+    public static final String MONTHLUNAR_KAR = "Kartika";
     /*Holiday*/
     public static final String MONDAY_HOLIDAY = "mondayHoliday";
     public static final String TUESDAY_HOLIDAY = "tuesdayHoliday";
