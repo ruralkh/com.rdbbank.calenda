@@ -105,6 +105,8 @@ public class DataMonthMaster extends BaseEntity {
 
     private String numMonth;
 
+    private String yearEn;
+
     @Column(name = "monday_solar_num",length = 30)
     public String getMondaySolarNum() {
         return mondaySolarNum;
@@ -517,5 +519,14 @@ public class DataMonthMaster extends BaseEntity {
 
     public void setNumMonth(String numMonth) {
         this.numMonth = numMonth;
+    }
+
+    @Column(name = "year_en")
+    public String getYearEn() {
+        return yearEn;
+    }
+
+    public void setYearEn(String yearEn) {
+        this.yearEn = yearEn;
     }
 }
