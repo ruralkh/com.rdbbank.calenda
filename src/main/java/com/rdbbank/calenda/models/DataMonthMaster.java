@@ -422,7 +422,7 @@ public class DataMonthMaster extends BaseEntity {
         this.sundayTOPURL = sundayTOPURL;
     }
 
-    @Column(name = "holiday1",length = 30)
+    @Column(name = "holiday1")
     public String getHoliday1() {
         return holiday1;
     }
@@ -431,7 +431,7 @@ public class DataMonthMaster extends BaseEntity {
         this.holiday1 = holiday1;
     }
 
-    @Column(name = "holiday2",length = 30)
+    @Column(name = "holiday2")
     public String getHoliday2() {
         return holiday2;
     }
@@ -440,7 +440,7 @@ public class DataMonthMaster extends BaseEntity {
         this.holiday2 = holiday2;
     }
 
-    @Column(name = "holiday3",length = 30)
+    @Column(name = "holiday3")
     public String getHoliday3() {
         return holiday3;
     }
@@ -449,7 +449,7 @@ public class DataMonthMaster extends BaseEntity {
         this.holiday3 = holiday3;
     }
 
-    @Column(name = "holiday4",length = 30)
+    @Column(name = "holiday4")
     public String getHoliday4() {
         return holiday4;
     }
@@ -458,7 +458,7 @@ public class DataMonthMaster extends BaseEntity {
         this.holiday4 = holiday4;
     }
 
-    @Column(name = "holiday5",length = 30)
+    @Column(name = "holiday5")
     public String getHoliday5() {
         return holiday5;
     }
