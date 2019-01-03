@@ -170,7 +170,7 @@ public class DataMonthMaster extends BaseEntity {
         this.sundaySolarNum = sundaySolarNum;
     }
 
-    @Column(name = "monday_topright_co",length = 30)
+    @Column(name = "monday_topright_co",length = 60)
     public String getMondayTOPRightCO() {
         return mondayTOPRightCO;
     }
@@ -179,7 +179,7 @@ public class DataMonthMaster extends BaseEntity {
         this.mondayTOPRightCO = mondayTOPRightCO;
     }
 
-    @Column(name = "tuesday_topright_co",length = 30)
+    @Column(name = "tuesday_topright_co",length = 60)
     public String getTuesdayTOPRightCO() {
         return tuesdayTOPRightCO;
     }
@@ -188,7 +188,7 @@ public class DataMonthMaster extends BaseEntity {
         this.tuesdayTOPRightCO = tuesdayTOPRightCO;
     }
 
-    @Column(name = "wednesday_topright_co",length = 30)
+    @Column(name = "wednesday_topright_co",length = 60)
     public String getWednesdayTOPRightCO() {
         return wednesdayTOPRightCO;
     }
@@ -197,7 +197,7 @@ public class DataMonthMaster extends BaseEntity {
         this.wednesdayTOPRightCO = wednesdayTOPRightCO;
     }
 
-    @Column(name = "thursday_topright_co",length = 30)
+    @Column(name = "thursday_topright_co",length = 60)
     public String getThursdayTOPRightCO() {
         return thursdayTOPRightCO;
     }
@@ -206,7 +206,7 @@ public class DataMonthMaster extends BaseEntity {
         this.thursdayTOPRightCO = thursdayTOPRightCO;
     }
 
-    @Column(name = "friday_topright_co",length = 30)
+    @Column(name = "friday_topright_co",length = 60)
     public String getFridayTOPRightCO() {
         return fridayTOPRightCO;
     }
@@ -215,7 +215,7 @@ public class DataMonthMaster extends BaseEntity {
         this.fridayTOPRightCO = fridayTOPRightCO;
     }
 
-    @Column(name = "saturday_topright_co",length = 30)
+    @Column(name = "saturday_topright_co",length = 60)
     public String getSaturdayTOPRightCO() {
         return saturdayTOPRightCO;
     }
@@ -224,7 +224,7 @@ public class DataMonthMaster extends BaseEntity {
         this.saturdayTOPRightCO = saturdayTOPRightCO;
     }
 
-    @Column(name = "sunday_topright_co",length = 30)
+    @Column(name = "sunday_topright_co",length = 60)
     public String getSundayTOPRightCO() {
         return sundayTOPRightCO;
     }
@@ -233,7 +233,7 @@ public class DataMonthMaster extends BaseEntity {
         this.sundayTOPRightCO = sundayTOPRightCO;
     }
 
-    @Column(name = "monday_midpright_co",length = 30)
+    @Column(name = "monday_midpright_co",length = 60)
     public String getMondayMidRightCO() {
         return mondayMidRightCO;
     }
@@ -242,7 +242,7 @@ public class DataMonthMaster extends BaseEntity {
         this.mondayMidRightCO = mondayMidRightCO;
     }
 
-    @Column(name = "tuesday_midpright_co",length = 30)
+    @Column(name = "tuesday_midpright_co",length = 60)
     public String getTuesdayMidRightCO() {
         return tuesdayMidRightCO;
     }
@@ -251,7 +251,7 @@ public class DataMonthMaster extends BaseEntity {
         this.tuesdayMidRightCO = tuesdayMidRightCO;
     }
 
-    @Column(name = "wednesday_midpright_co",length = 30)
+    @Column(name = "wednesday_midpright_co",length = 60)
     public String getWednesdayMidRightCO() {
         return wednesdayMidRightCO;
     }
@@ -260,7 +260,7 @@ public class DataMonthMaster extends BaseEntity {
         this.wednesdayMidRightCO = wednesdayMidRightCO;
     }
 
-    @Column(name = "thursday_midpright_co",length = 30)
+    @Column(name = "thursday_midpright_co",length = 60)
     public String getThursdayMidRightCO() {
         return thursdayMidRightCO;
     }
@@ -269,7 +269,7 @@ public class DataMonthMaster extends BaseEntity {
         this.thursdayMidRightCO = thursdayMidRightCO;
     }
 
-    @Column(name = "friday_midpright_co",length = 30)
+    @Column(name = "friday_midpright_co",length = 60)
     public String getFridayMidRightCO() {
         return fridayMidRightCO;
     }
@@ -278,7 +278,7 @@ public class DataMonthMaster extends BaseEntity {
         this.fridayMidRightCO = fridayMidRightCO;
     }
 
-    @Column(name = "saturday_midpright_co",length = 30)
+    @Column(name = "saturday_midpright_co",length = 60)
     public String getSaturdayMidRightCO() {
         return saturdayMidRightCO;
     }
@@ -287,7 +287,7 @@ public class DataMonthMaster extends BaseEntity {
         this.saturdayMidRightCO = saturdayMidRightCO;
     }
 
-    @Column(name = "sunday_midpright_co",length = 30)
+    @Column(name = "sunday_midpright_co",length = 60)
     public String getSundayMidRightCO() {
         return sundayMidRightCO;
     }
@@ -296,7 +296,7 @@ public class DataMonthMaster extends BaseEntity {
         this.sundayMidRightCO = sundayMidRightCO;
     }
 
-    @Column(name = "monday_underpright_co",length = 30)
+    @Column(name = "monday_underpright_co",length = 60)
     public String getMondayUnderRightCO() {
         return mondayUnderRightCO;
     }
@@ -305,7 +305,7 @@ public class DataMonthMaster extends BaseEntity {
         this.mondayUnderRightCO = mondayUnderRightCO;
     }
 
-    @Column(name = "tuesday_underpright_co",length = 30)
+    @Column(name = "tuesday_underpright_co",length = 60)
     public String getTuesdayUnderRightCO() {
         return tuesdayUnderRightCO;
     }
@@ -314,7 +314,7 @@ public class DataMonthMaster extends BaseEntity {
         this.tuesdayUnderRightCO = tuesdayUnderRightCO;
     }
 
-    @Column(name = "wednesday_underpright_co",length = 30)
+    @Column(name = "wednesday_underpright_co",length = 60)
     public String getWednesdayUnderRightCO() {
         return wednesdayUnderRightCO;
     }
@@ -323,7 +323,7 @@ public class DataMonthMaster extends BaseEntity {
         this.wednesdayUnderRightCO = wednesdayUnderRightCO;
     }
 
-    @Column(name = "thursday_underpright_co",length = 30)
+    @Column(name = "thursday_underpright_co",length = 60)
     public String getThursdayUnderRightCO() {
         return thursdayUnderRightCO;
     }
@@ -332,7 +332,7 @@ public class DataMonthMaster extends BaseEntity {
         this.thursdayUnderRightCO = thursdayUnderRightCO;
     }
 
-    @Column(name = "friday_underpright_co",length = 30)
+    @Column(name = "friday_underpright_co",length = 60)
     public String getFridayUnderRightCO() {
         return fridayUnderRightCO;
     }
@@ -341,7 +341,7 @@ public class DataMonthMaster extends BaseEntity {
         this.fridayUnderRightCO = fridayUnderRightCO;
     }
 
-    @Column(name = "saturday_underpright_co",length = 30)
+    @Column(name = "saturday_underpright_co",length = 60)
     public String getSaturdayUnderRightCO() {
         return saturdayUnderRightCO;
     }
@@ -350,7 +350,7 @@ public class DataMonthMaster extends BaseEntity {
         this.saturdayUnderRightCO = saturdayUnderRightCO;
     }
 
-    @Column(name = "sunday_underpright_co",length = 30)
+    @Column(name = "sunday_underpright_co",length = 60)
     public String getSundayUnderRightCO() {
         return sundayUnderRightCO;
     }
@@ -359,7 +359,7 @@ public class DataMonthMaster extends BaseEntity {
         this.sundayUnderRightCO = sundayUnderRightCO;
     }
 
-    @Column(name = "monday_top_url",length = 30)
+    @Column(name = "monday_top_url",length = 60)
     public String getMondayTOPURL() {
         return mondayTOPURL;
     }
@@ -368,7 +368,7 @@ public class DataMonthMaster extends BaseEntity {
         this.mondayTOPURL = mondayTOPURL;
     }
 
-    @Column(name = "tuesday_top_url",length = 30)
+    @Column(name = "tuesday_top_url",length = 60)
     public String getTuesdayTOPURL() {
         return tuesdayTOPURL;
     }
@@ -377,7 +377,7 @@ public class DataMonthMaster extends BaseEntity {
         this.tuesdayTOPURL = tuesdayTOPURL;
     }
 
-    @Column(name = "wednesday_top_url",length = 30)
+    @Column(name = "wednesday_top_url",length = 60)
     public String getWednesdayTOPURL() {
         return wednesdayTOPURL;
     }
@@ -386,7 +386,7 @@ public class DataMonthMaster extends BaseEntity {
         this.wednesdayTOPURL = wednesdayTOPURL;
     }
 
-    @Column(name = "thursday_top_url",length = 30)
+    @Column(name = "thursday_top_url",length = 60)
     public String getThursdayTOPURL() {
         return thursdayTOPURL;
     }
@@ -395,7 +395,7 @@ public class DataMonthMaster extends BaseEntity {
         this.thursdayTOPURL = thursdayTOPURL;
     }
 
-    @Column(name = "friday_top_url",length = 30)
+    @Column(name = "friday_top_url",length = 60)
     public String getFridayTOPURL() {
         return fridayTOPURL;
     }
@@ -404,7 +404,7 @@ public class DataMonthMaster extends BaseEntity {
         this.fridayTOPURL = fridayTOPURL;
     }
 
-    @Column(name = "saturday_top_url",length = 30)
+    @Column(name = "saturday_top_url",length = 60)
     public String getSaturdayTOPURL() {
         return saturdayTOPURL;
     }
@@ -413,7 +413,7 @@ public class DataMonthMaster extends BaseEntity {
         this.saturdayTOPURL = saturdayTOPURL;
     }
 
-    @Column(name = "sunday_top_url",length = 30)
+    @Column(name = "sunday_top_url",length = 60)
     public String getSundayTOPURL() {
         return sundayTOPURL;
     }
