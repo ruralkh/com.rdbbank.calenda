@@ -249,51 +249,6 @@ INSERT INTO td_data_month_master(id,monday_solar_num,tuesday_solar_num,wednesday
   ,monday_underpright_co,tuesday_underpright_co,wednesday_underpright_co,thursday_underpright_co,friday_underpright_co,saturday_underpright_co,sunday_underpright_co
   ,month,month_en,num_month,year,year_en,year_lunar,year_buddha_era,holiday1,holiday2,holiday3,holiday4,holiday5
 ) VALUES
-      /*08 August*/
-      (36,'','','','1','2','3','4'
-        ,'','','','១ កើត ខែស្រាពណ៌','២ កើត','៣ កើត','៤ កើត'
-        ,'','','','','','',''
-        ,'','','','','','',''
-        ,'','','','','','',''
-        ,'សីហា','August','08','២០១៩','2019','កុរ','២៥៦២','','','','',''
-      ),
-      (37,'5','6','7','8','9','10','11'
-        ,'៥ កើត','៦ កើត','៧ កើត','៨ កើត','៩ កើត','១០ កើត','១១ កើត'
-        ,'','','','url','','',''
-        ,'','','','','','',''
-        ,'','','','','','',''
-        ,'សីហា','August','08','២០១៩','2019','កុរ','២៥៦២','','','','',''
-      ),
-      (38,'12','13','14','15','16','17','18'
-        ,'១២ កើត','១៣ កើត','១៤ កើត','១៥ កើត','១ រោចស្រាពណ៌','២ រោច','៣ រោច'
-        ,'','','','url','','',''
-        ,'','','','','','',''
-        ,'','','','','ពេញបូណ៌មី សែនក្បាលទឹក','',''
-        ,'សីហា','August','08','២០១៩','2019','កុរ','២៥៦២','','','','',''
-      ),
-      (39,'19','20','21','22','23','24','25'
-        ,'៤ រោច','៥ រោច','៦ រោច','៧ រោច','៨ រោច','៩ រោច','១០ រោច'
-        ,'','','','','url','',''
-        ,'','','','','','',''
-        ,'','','','','','',''
-        ,'សីហា','August','08','២០១៩','2019','កុរ','២៥៦២','','','','',''
-      ),
-      (40,'26','27','28','29','30','31',''
-        ,'១១ រោច','១២ រោច','១៣ រោច ខែកោរ','១៤ រោចដាច់ខែស្រាពណ៌','១ កើតខែភទ្របទ','២ កើត',''
-        ,'','','','url','','',''
-        ,'','','','','','',''
-        ,'','','','','','',''
-        ,'សីហា','August','08','២០១៩','2019','កុរ','២៥៦២','','','','',''
-    );
-
-
-INSERT INTO td_data_month_master(id,monday_solar_num,tuesday_solar_num,wednesday_solar_num,thursday_solar_num,friday_solar_num,saturday_solar_num,sunday_solar_num
-  ,monday_midpright_co,tuesday_midpright_co,wednesday_midpright_co,thursday_midpright_co,friday_midpright_co,saturday_midpright_co,sunday_midpright_co
-  ,monday_top_url,tuesday_top_url,wednesday_top_url,thursday_top_url,friday_top_url,saturday_top_url,sunday_top_url
-  ,monday_topright_co,tuesday_topright_co,wednesday_topright_co,thursday_topright_co,friday_topright_co,saturday_topright_co,sunday_topright_co
-  ,monday_underpright_co,tuesday_underpright_co,wednesday_underpright_co,thursday_underpright_co,friday_underpright_co,saturday_underpright_co,sunday_underpright_co
-  ,month,month_en,num_month,year,year_en,year_lunar,year_buddha_era,holiday1,holiday2,holiday3,holiday4,holiday5
-) VALUES
   /*06 June*/
   (26,'','','','','','1','2'
     ,'','','','','','១៤ រោច','១៥ រោច'
@@ -374,6 +329,49 @@ INSERT INTO td_data_month_master(id,monday_solar_num,tuesday_solar_num,wednesday
         ,'','','គុកទួលស្លែងចូលចូណេស្កូ','','','',''
         ,'កក្កដា','July','07','២០១៩','2019','កុរ','២៥៦២','','','','',''
       );
+      INSERT INTO td_data_month_master(id,monday_solar_num,tuesday_solar_num,wednesday_solar_num,thursday_solar_num,friday_solar_num,saturday_solar_num,sunday_solar_num
+  ,monday_midpright_co,tuesday_midpright_co,wednesday_midpright_co,thursday_midpright_co,friday_midpright_co,saturday_midpright_co,sunday_midpright_co
+  ,monday_top_url,tuesday_top_url,wednesday_top_url,thursday_top_url,friday_top_url,saturday_top_url,sunday_top_url
+  ,monday_topright_co,tuesday_topright_co,wednesday_topright_co,thursday_topright_co,friday_topright_co,saturday_topright_co,sunday_topright_co
+  ,monday_underpright_co,tuesday_underpright_co,wednesday_underpright_co,thursday_underpright_co,friday_underpright_co,saturday_underpright_co,sunday_underpright_co
+  ,month,month_en,num_month,year,year_en,year_lunar,year_buddha_era,holiday1,holiday2,holiday3,holiday4,holiday5
+) VALUES
+      /*08 August*/
+      (36,'','','','1','2','3','4'
+        ,'','','','១ កើត ខែស្រាពណ៌','២ កើត','៣ កើត','៤ កើត'
+        ,'','','','','','',''
+        ,'','','','','','',''
+        ,'','','','','','',''
+        ,'សីហា','August','08','២០១៩','2019','កុរ','២៥៦២','','','','',''
+      ),
+      (37,'5','6','7','8','9','10','11'
+        ,'៥ កើត','៦ កើត','៧ កើត','៨ កើត','៩ កើត','១០ កើត','១១ កើត'
+        ,'','','','url','','',''
+        ,'','','','','','',''
+        ,'','','','','','',''
+        ,'សីហា','August','08','២០១៩','2019','កុរ','២៥៦២','','','','',''
+      ),
+      (38,'12','13','14','15','16','17','18'
+        ,'១២ កើត','១៣ កើត','១៤ កើត','១៥ កើត','១ រោចស្រាពណ៌','២ រោច','៣ រោច'
+        ,'','','','url','','',''
+        ,'','','','','','',''
+        ,'','','','','ពេញបូណ៌មី សែនក្បាលទឹក','',''
+        ,'សីហា','August','08','២០១៩','2019','កុរ','២៥៦២','','','','',''
+      ),
+      (39,'19','20','21','22','23','24','25'
+        ,'៤ រោច','៥ រោច','៦ រោច','៧ រោច','៨ រោច','៩ រោច','១០ រោច'
+        ,'','','','','url','',''
+        ,'','','','','','',''
+        ,'','','','','','',''
+        ,'សីហា','August','08','២០១៩','2019','កុរ','២៥៦២','','','','',''
+      ),
+      (40,'26','27','28','29','30','31',''
+        ,'១១ រោច','១២ រោច','១៣ រោច ខែកោរ','១៤ រោចដាច់ខែស្រាពណ៌','១ កើតខែភទ្របទ','២ កើត',''
+        ,'','','','url','','',''
+        ,'','','','','','',''
+        ,'','','','','','',''
+        ,'សីហា','August','08','២០១៩','2019','កុរ','២៥៦២','','','','',''
+    );
 INSERT INTO td_data_month_master(id,monday_solar_num,tuesday_solar_num,wednesday_solar_num,thursday_solar_num,friday_solar_num,saturday_solar_num,sunday_solar_num
   ,monday_midpright_co,tuesday_midpright_co,wednesday_midpright_co,thursday_midpright_co,friday_midpright_co,saturday_midpright_co,sunday_midpright_co
   ,monday_top_url,tuesday_top_url,wednesday_top_url,thursday_top_url,friday_top_url,saturday_top_url,sunday_top_url
